@@ -23,6 +23,20 @@ CREATE TABLE plot (
     heroic_choice TEXT NOT NULL,
     villainous_choice TEXT NOT NULL,
     heroic_block_id BIGINT,
-    is_heroic BOOLEAN NOT NULL,
-    villainous_block_id BIGINT
+    villainous_block_id BIGINT,
+    is_heroic BOOLEAN
 );
+
+INSERT INTO 
+    plot (prompt, heroic_choice, villainous_choice, heroic_block_id, villainous_block_id, is_heroic)
+VALUES 
+    ('prompt 1', 'good', 'bad', 2, 3, null),
+    ('prompt 2', 'good', 'bad', 4, 5, true),
+    ('prompt 3', 'good', 'bad', 6, 7, false);
+
+INSERT INTO
+    user (username)
+VALUES
+    ('default');
+
+
