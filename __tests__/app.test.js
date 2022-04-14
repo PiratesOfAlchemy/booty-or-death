@@ -18,6 +18,12 @@ describe('booty-or-death routes', () => {
   });
 
   it('should take user selection and return a new prompt with options', async () => {
-    const res = await request(app).get('/api/v1/prompts/').send();
+    const res = await request(app)
+      .get('/api/v1/prompts/')
+    const newPrompt = await Model.getById(res.body.heroic_block_id);
+    const expected = {
+      prompt: 'prompt 2',
+    } 
+    expect(newPrompt.prompt).toEqual(expected)
   });
 });
