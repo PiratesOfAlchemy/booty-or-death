@@ -21,7 +21,7 @@ CREATE TABLE user_plot (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     block_id BIGINT REFERENCES plot(id),
     user_id BIGINT REFERENCES users(id),
-    was_hero BOOLEAN
+    was_heroic BOOLEAN
 );
 
 INSERT INTO 
