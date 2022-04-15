@@ -14,11 +14,17 @@ describe('booty-or-death routes', () => {
 
   it('should be able to get a prompt and two options by id', async () => {
     const res = await request(app).get('/api/v1/plots/1');
+
     const expected = {
+      id: expect.any(String),
       prompt: 'prompt 1',
       heroicChoice: 'good',
       villainousChoice: 'bad',
+      heroicBlockId: res.body.heroicBlockId,
+      villainousBlockId: res.body.villainousBlockId,
+      isHeroic: null
     };
+
     expect(res.body).toEqual(expected);
   });
 
