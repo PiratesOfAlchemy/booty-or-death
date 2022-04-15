@@ -1,6 +1,3 @@
--- Use this file to define your SQL tables
--- The SQL in this file will be executed when you run `npm run setup-db`
-
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS user_plot CASCADE;
 DROP TABLE IF EXISTS plot CASCADE;
@@ -8,13 +5,6 @@ DROP TABLE IF EXISTS plot CASCADE;
 CREATE TABLE users (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     username TEXT NOT NULL
-);
-
-CREATE TABLE user_plot (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    block_id BIGINT REFERENCES plot(id),
-    user_id BIGINT REFERENCES users(id),
-    was_hero BOOLEAN REFERENCES plot(is_heroic)
 );
 
 CREATE TABLE plot (
@@ -27,6 +17,13 @@ CREATE TABLE plot (
     is_heroic BOOLEAN
 );
 
+CREATE TABLE user_plot (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    block_id BIGINT REFERENCES plot(id),
+    user_id BIGINT REFERENCES users(id),
+    was_hero BOOLEAN
+);
+
 INSERT INTO 
     plot (prompt, heroic_choice, villainous_choice, heroic_block_id, villainous_block_id, is_heroic)
 VALUES 
@@ -35,7 +32,7 @@ VALUES
     ('prompt 3', 'good', 'bad', 6, 7, false);
 
 INSERT INTO
-    user (username)
+    users (username)
 VALUES
     ('default');
 
