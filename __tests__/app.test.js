@@ -22,15 +22,15 @@ describe('booty-or-death routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  // it('should be able to insert a user name into users table', async () => {
-  //   const res = await request(app)
-  //     .post('/api/v1/users')
-  //     .send({ username: 'test' });
+  it('should be able to insert a user name into users table', async () => {
+    const res = await request(app)
+      .post('/api/v1/users')
+      .send({ username: 'test' });
 
-  //   const expected = {
-  //     id: expect.any(String),
-  //     username: 'test',
-  //   };
-  //   expect(res.body).toEqual(expected);
-  // });
+    const expected = {
+      id: expect.any(String),
+      username: 'test',
+    };
+    expect(res.body).toEqual(expected);
+  });
 });
