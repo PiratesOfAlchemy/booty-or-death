@@ -33,4 +33,30 @@ describe('booty-or-death routes', () => {
     };
     expect(res.body).toEqual(expected);
   });
+
+  it('should populate the user-plot table with the players choices and whether or not they are heroic', async () => {
+    // make user and join user_plot.user_id with user.id
+    await request(app)
+      .post('/api/v1/users')
+      .send({ username: 'Salty Dog' });
+   
+    // get plot by id where heroic is not null
+    await request(app)
+      .get('/api/v1/plots/2');
+
+    // from that we'll return all from user plot
+    const res = await request(app)
+      .get('/api/v1/user_plot');
+
+    const expected =  {
+      id: expect.any(String),
+      blockId: 2,
+      userId: expect.any(String),
+      wasHero: true
+    };
+
+    expect(res.body).toEqual(expected);
+
+
+  });
 });
