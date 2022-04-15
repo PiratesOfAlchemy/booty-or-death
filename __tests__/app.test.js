@@ -36,7 +36,7 @@ describe('booty-or-death routes', () => {
 
   it('should create new row in user-plot table that gets values from plot table and JOINS users table', async () => {
     // make user and join user_plot.user_id with user.id
-    await request(app)
+    const user = await request(app)
       .post('/api/v1/users')
       .send({ username: 'Salty Dog' });
     
@@ -46,15 +46,16 @@ describe('booty-or-death routes', () => {
 
     // from that we'll return all from user plot
     const res = await request(app)
-      .post('/api/v1/user_plot')
+      .post('/api/v1/user_plots')
       .send({
-        blockId: plot.id,
-        wasHeroic: plot.isHeroic
+        blockId: plot.body.id,
+        wasHeroic: plot.body.isHeroic,
+        userId: user.body.id
       });
 
     const expected =  {
       id: expect.any(String),
-      blockId: 2,
+      blockId: plot.body.id,
       userId: expect.any(String),
       wasHeroic: true
     };
