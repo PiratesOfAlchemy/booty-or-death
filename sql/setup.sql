@@ -35,5 +35,3 @@ INSERT INTO
     users (username)
 VALUES
     ('default');
-
-
