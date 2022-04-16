@@ -33,8 +33,10 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "cross-fetch": "^3.1.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "inquirer": "^8.2.2",
     "pg": "^8.7.3"
   }
 }
