@@ -71,7 +71,26 @@ describe('booty-or-death routes', () => {
 
   });
 
-  it.skip('should get all rows on user_plot table with the id of 1', async () => {
-    // 
+  it('should get all rows on user_plot table with the id of 1 and sum column was_heroic', async () => {
+    const user = await request(app)
+      .post('/api/v1/users')
+      .send({ username: 'Salty Dog' });
+
+    const plot = await request(app)
+      .get('/api/v1/plots/2');
+
+    await request(app)
+      .post('/api/v1/user_plots')
+      .send({
+        blockId: plot.body.id,
+        wasHeroic: plot.body.isHeroic,
+        userId: user.body.id
+      });
+
+    const res = await request(app)
+      .get(`/api/v1/user_plots/${user.body.id}`);
+
+    expect(Number(res.text)).toEqual(1);
+    
   });
 });
