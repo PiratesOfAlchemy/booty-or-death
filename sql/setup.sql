@@ -38,9 +38,15 @@ VALUES
 
     (5, 'prompt 5', 'good', 'bad', 10, 11, false),
 
-    (6, 'prompt 6', 'good', 'bad', 12, 27, true),
+    (6, 'Captain tells you of his cousin, the dreaded Blackbeard (who totally stole his look from White Stache, obvs) and mentions a the treasure map he has been saving for a rainy day (it is probably not even REAL, right?).', 'convince him of its plausability', 'try to steal it off him', 12, 27, true),
 
     (7, 'prompt 7', 'good', 'bad', 13, 14, false),
+
+    (12, 'Captain White Stache has decide to take a chance on you and the hunt for Blackbeards treasure begins, only there is a bit of an issue. You can take the most direct course to get to the treaure as quickly as possible and face the dangerous rocky outcropping surrounding the island. Or take the longer path on the windward side of the island with a chance of relatively safe passage.', 'safety first', 'quick and dirty', 19, 20, true),
+
+    (19, 'You make it to the island without a scratch. You and three of the Captains most trusted crew head ashore and make your way through the treacherous jungle. As night falls you find the map seems to be leading you towards a dark, mysterious cave.  Do you...', 'make camp in a clearing and try again tomorrow', 'continue on and venture into the cave', 24, 25, true),
+
+    (20, 'A storm kicks up and you are bashed against the rocky isles. You are forced to abandon ship! Somehow you make it to shore but you realize half the map is destroyed in the process.', 'barter with the locals for supplies and try to repair the ship', 'continue on and hope to find clues along the way', 25, 26, false),
 
     (23, 'end game5', 'replay', 'quit', 0, 0, null),
     (24, 'end game4', 'replay', 'quit', 0, 0, null),
