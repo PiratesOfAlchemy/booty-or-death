@@ -34,6 +34,20 @@ VALUES
 
     (3, 'You''ve managed to piss off the first mate, Teal Steel and have the honor of swabbing the deck for the next month, as well as any other task he seems fit to give you. Do you...', 'try to impress him with your worth ethic in hopes of getting back on his good side', 'intimidate a crewmate into completing your tasks', 6, 7, false),
 
+    (5, 'The British are coming! You''re unprepared and understocked.', 'raise the white flag', 'fire on them with all you have!', 10, 11, false),
+
+    (10, 'The British are boarding your ship and will be taking everyone captive and return them to England to face penalty for their crimes. You...', 'try to convince them to leave', 'try to convince them to leave', 17, 18, true),
+
+    (11, 'Nice try, but the mighty Drunken Sea Dragon is sunk. Not a GREATEST first day as a pirate. Hope you learned how to swim.', 'replay', 'quit', 0, 0, null),
+
+    (17, 'You only have moments to think of a plan to scare them off your ship...', 'convince them the ship is haunted', 'spew bodily fluids all over the place', 24, 25, true),
+
+    (18, 'You''re easily outnumbered and the majority of the crew is killed while the most handy are gathered up and forced to board the British ship. That night you find a way to break out of the brig and...', 'take a rowboat and the remainder of your crew and hope you reach land soon', 'hide away in crate and hope to escape when ship next dock', 25, 26, false),
+
+    (25, 'As your reward for surviving as pirate, you''re now the proud owner of a beautiful feather to start creating a replica of Captain White Stache''s marvelous hat that you''ve been eye-balling since join The Drunken Sea Dragon.', 'replay', 'quit', 0, 0, null),
+
+    (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
+
     (7, 'A storm''s a-brewing as you''re relaxing below deck. Unfortunately the poor lad who was doing your chores gets thrown overboard.', 'dive in after them', 'while everyone is distracted, pick the lock to the captain''s cabins', 13, 14, false),
 
     (13, 'Death', 'replay', 'quit', 0, 0, true),
