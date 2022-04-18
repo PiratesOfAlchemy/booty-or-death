@@ -52,7 +52,7 @@ VALUES
 
     (12, 'Captain White Stache has decide to take a chance on you and the hunt for Blackbeard''s treasure begins, only there''s a bit of an issue. You can take the most direct course to get to the treaure as quickly as possible and face the dangerous rocky outcropping surrounding the island. Or take the longer path on the windward side of the island with a chance of relatively safe passage.', 'safety first', 'quick and dirty', 19, 20, true),
 
-    (13, 'Death', 'replay', 'quit', 0, 0, true),
+    (13, 'You give it your most valiant effort but die in shark-infested waters. Life be like that sometimes. Maybe you should''ve built more karma up, sooner and you would''ve had better luck.', 'replay', 'quit', 0, 0, true),
 
     (14, 'That scurvy dog! You find the supplies the Captain has been hoarding from the crew...', 'secretly distribute to the crew', 'call for a mutiny', 21, 22, false), 
 
@@ -70,7 +70,7 @@ VALUES
 
     (21, 'The crew is aghast at the Captain''s impertinence and might be more on your side...if they weren''t so desperate for rations. A fight breaks out as you''re trying to distribute the food evenly...', 'give your share of oranges to calm the tides', 'draw your blade', 26, 27, true),
 
-    (22, 'Death', 'replay', 'quit', 0, 0, false),
+    (22, 'Surprise! You are hated by everyone on the ship and they aren''t into your idea of mutiny-ing their precious captain.', 'replay', 'quit', 0, 0, false),
 
     (23, 'You''ve found the infamous Blackbeard''s treasure!! It''s now up to you how ye see fit to split it amongst the crew.', 'replay', 'quit', 0, 0, null),
     
