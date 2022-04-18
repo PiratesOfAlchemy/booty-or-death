@@ -47,6 +47,18 @@ VALUES
     (25, "As your reward for surviving as pirate, you're now the proud owner of a beautiful feather to start creating a replica of Captain White Stache's marvelous hat that you've been eye-balling since join The Drunken Sea Dragon.", 'replay', 'quit', 0, 0, null),
 
     (26, "Drat! You've contracted skurvy and the worst news? The teeth don't go back in! And you might be losing what's left of your friends, too. Best find ya some oranges, quick as ye can!", 'replay', 'quit', 0, 0, null),
+    (7, 'A storm''s a-brewing as you''re relaxing below deck. Unfortunately the poor lad who was doing your chores gets thrown overboard.', 'dive in after them', 'while everyone is distracted, pick the lock to the captain''s cabins', 13, 14, false),
+
+    (13, 'Death', 'replay', 'quit', 0, 0, true),
+
+    (14, 'That scurvy dog! You find the supplies the Captain has been hoarding from the crew...', 'secretly distribute to the crew', 'call for a mutiny', 21, 22, false), 
+
+    (21, 'The crew is aghast at the Captain''s impertinence and might be more on your side...if they weren''t so desperate for rations. A fight breaks out as you''re trying to distribute the food evenly...', 'give your share of oranges to calm the tides', 'draw your blade', 26, 27, true), 
+
+    (27, 'A cry to "Walk the plank!" goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, false),
+
+    (22, 'Death', 'replay', 'quit', 0, 0, false),
+
     (4, 'While keeping lookout, you see a ship in the distance that is gaining on you fast. You call out the alarm! Shots are fired and you split the other ship''s mast in half. As you swing aboard the enemy''s ship, do you...', 'try to gather all the enemy crew while the pillaging begins', 'lead the raid with gusto!', 8, 9, true),
 
     (8, 'With the majority of the crew alive, you''re able to hear a very interesting tidbit of information. Seems they''ve been hoarding the map to the fearsome Blackbeard''s vast treasures.', 'tell the captain', 'confiscator it for yourself', 15, 16, true),
@@ -59,7 +71,7 @@ VALUES
 
     (23, 'You''ve found the infamous Blackbeard''s treasure!! It''s now up to you how ye see fit to split it amongst the crew.', 'replay', 'quit', 0, 0, null),
     
-    (24, 'You''re reward with the best booty (aside treasure itself, a''course), a one-legged parrot name Walki-Talki. And tied around his leg is a fashionable pearl necklace, yours to do with as you wish', 'replay', 'quit', 0, 0, null),
+    (24, 'You''re reward with the best booty (aside treasure itself, a''course), a one-legged parrot name Walki-Talki. And tied around his leg is a fashionable pearl necklace, yours to do with as you wish', 'replay', 'quit', 0, 0, null);
 
 INSERT INTO
     users (username)
