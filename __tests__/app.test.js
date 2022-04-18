@@ -40,7 +40,7 @@ describe('booty-or-death routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it('should create new row in user-plot table that gets values from plot table and JOINS users table', async () => {
+  it.only('should create new row in user-plot table that gets values from plot table and JOINS users table', async () => {
     // make user and join user_plot.user_id with user.id
     const user = await request(app)
       .post('/api/v1/users')
