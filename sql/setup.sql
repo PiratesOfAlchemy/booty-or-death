@@ -34,10 +34,27 @@ VALUES
 
     (3, 'You''ve managed to piss off the first mate, Teal Steel and have the honor of swabbing the deck for the next month, as well as any other task he seems fit to give you. Do you...', 'try to impress him with your worth ethic in hopes of getting back on his good side', 'intimidate a crewmate into completing your tasks', 6, 7, false),
 
+<<<<<<< HEAD
     (4, 'While keeping lookout, you see a ship in the distance that is gaining on you fast. You call out the alarm! Shots are fired and you split the other ship''s mast in half. As you swing aboard the enemy''s ship, do you...', 'try to gather all the enemy crew while the pillaging begins', 'lead the raid with gusto!', 8, 9, true), 
 
     (6, 'Captain tells you of his cousin, the dreaded Blackbeard (who totally stole his look from White Stache, obvs) and mentions the treasure map he''s been saving for a rainy day (it''s probably not even REAL, right?).', 'convince him of it''s plausability', 'try to steal it off him', 12, 27, true),
     
+=======
+    (5, 'The British are coming! You''re unprepared and understocked.', 'raise the white flag', 'fire on them with all you have!', 10, 11, false),
+
+    (10, 'The British are boarding your ship and will be taking everyone captive and return them to England to face penalty for their crimes. You...', 'try to convince them to leave', 'try to convince them to leave', 17, 18, true),
+
+    (11, 'Nice try, but the mighty Drunken Sea Dragon is sunk. Not a GREATEST first day as a pirate. Hope you learned how to swim.', 'replay', 'quit', 0, 0, null),
+
+    (17, 'You only have moments to think of a plan to scare them off your ship...', 'convince them the ship is haunted', 'spew bodily fluids all over the place', 24, 25, true),
+
+    (18, 'You''re easily outnumbered and the majority of the crew is killed while the most handy are gathered up and forced to board the British ship. That night you find a way to break out of the brig and...', 'take a rowboat and the remainder of your crew and hope you reach land soon', 'hide away in crate and hope to escape when ship next dock', 25, 26, false),
+
+    (25, 'As your reward for surviving as pirate, you''re now the proud owner of a beautiful feather to start creating a replica of Captain White Stache''s marvelous hat that you''ve been eye-balling since join The Drunken Sea Dragon.', 'replay', 'quit', 0, 0, null),
+
+    (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
+
+>>>>>>> fbc210578108d769e5907b43638706b99f6b2a71
     (7, 'A storm''s a-brewing as you''re relaxing below deck. Unfortunately the poor lad who was doing your chores gets thrown overboard.', 'dive in after them', 'while everyone is distracted, pick the lock to the captain''s cabins', 13, 14, false),
 
     (8, 'With the majority of the crew alive, you''re able to hear a very interesting tidbit of information. Seems they''ve been hoarding the map to the fearsome Blackbeard''s vast treasures.', 'tell the captain', 'confiscator it for yourself', 15, 16, true),
