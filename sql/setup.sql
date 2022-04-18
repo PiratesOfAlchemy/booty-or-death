@@ -40,7 +40,7 @@ VALUES
 
     (9, 'Give no quarter! You fight violently and enthusiastically, but soon find yourself outmatched by the more seasoned pirates and find yourself run through. The worst bit? The bloody mate''s name is Jeff. You were bested by Jeff.', 'replay', 'quit', 0, 0, false),
 
-    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, and has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 25, 24, true),
+    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, and has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 23, 24, true),
 
     (16, 'You steal a rowboat and make it to the island just before your limited supplies run out. As you scour the island in search of food, you come across a sad little bedraggled parrot, quite literally on their last leg...', 'offer the poor bird the last of your food', 'eat the bird', 24, 25, false),
 
