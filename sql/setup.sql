@@ -9,7 +9,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE plot (
-    id BIGINT IDENTITY PRIMARY KEY,
+    id BIGINT PRIMARY KEY,
     prompt TEXT NOT NULL,
     heroic_choice TEXT NOT NULL,
     villainous_choice TEXT,
@@ -34,18 +34,18 @@ VALUES
 
     (3, 'You''ve managed to piss off the first mate, Teal Steel and have the honor of swabbing the deck for the next month, as well as any other task he seems fit to give you. Do you...', 'try to impress him with your worth ethic in hopes of getting back on his good side', 'intimidate a crewmate into completing your tasks', 6, 7, false),
 
-    ('prompt 4', 'good', 'bad', 8, 9, true),
+    (4, 'prompt 4', 'good', 'bad', 8, 9, true),
 
-    ('prompt 5', 'good', 'bad', 10, 11, false),
+    (5, 'prompt 5', 'good', 'bad', 10, 11, false),
 
-    ('prompt 6', 'good', 'bad', 12, 27, true),
+    (6, 'prompt 6', 'good', 'bad', 12, 27, true),
 
-    ('prompt 7', 'good', 'bad', 13, 14, false);
+    (7, 'prompt 7', 'good', 'bad', 13, 14, false),
 
-    (23, 'end game5', 'replay', 'quit', 0, 0, null);
-    (24, 'end game4', 'replay', 'quit', 0, 0, null);
-    (25, 'end game3', 'replay', 'quit', 0, 0, null);
-    (26, 'end game2', 'replay', 'quit', 0, 0, null);
+    (23, 'end game5', 'replay', 'quit', 0, 0, null),
+    (24, 'end game4', 'replay', 'quit', 0, 0, null),
+    (25, 'end game3', 'replay', 'quit', 0, 0, null),
+    (26, 'end game2', 'replay', 'quit', 0, 0, null),
     (27, 'end game1', 'replay', 'quit', 0, 0, null);
 
 INSERT INTO
