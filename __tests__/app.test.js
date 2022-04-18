@@ -17,9 +17,9 @@ describe('booty-or-death routes', () => {
 
     const expected = {
       id: expect.any(String),
-      prompt: 'prompt 1',
-      heroicChoice: 'good',
-      villainousChoice: 'bad',
+      prompt: 'Ahoy matey! Welcome to your first day aboard the mighty Drunken Sea Dragon, captained by the most fearsome pirate of these seven seas, Captain White Stache. Ye\'ll want to make an impression your mates as you\'ll be living with them for years to come (if ye last that long).',
+      heroicChoice: 'bake a delicious peace-offering cake',
+      villainousChoice: 'insult the first person you see',
       heroicBlockId: res.body.heroicBlockId,
       villainousBlockId: res.body.villainousBlockId,
       isHeroic: null
@@ -40,7 +40,7 @@ describe('booty-or-death routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  it.only('should create new row in user-plot table that gets values from plot table and JOINS users table', async () => {
+  it('should create new row in user-plot table that gets values from plot table and JOINS users table', async () => {
     // make user and join user_plot.user_id with user.id
     const user = await request(app)
       .post('/api/v1/users')
