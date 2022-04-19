@@ -80,9 +80,9 @@ VALUES
 
     (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
 
-    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null);
+    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
 
-    (28, 'test chance', 'barter with the locals for supplies and try to repair the ship', 'continue on and hope to find clues along the way', 25, 26, false),
+    (28, 'test chance', 'barter with the locals for supplies and try to repair the ship', 'continue on and hope to find clues along the way', 25, 26, false);
 
 
 
