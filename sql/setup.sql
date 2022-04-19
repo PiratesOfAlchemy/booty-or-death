@@ -48,7 +48,7 @@ VALUES
 
     (10, 'The British are boarding your ship and will be taking everyone captive and return them to England to face penalty for their crimes. You...', 'try to convince them to leave', 'try to take them all on', 17, 18, true),
 
-    (11, 'Nice try, but the mighty Drunken Sea Dragon is sunk. Not a GREATEST first day as a pirate. Hope you learned how to swim.', 'replay', 'quit', 0, 0, null),
+    (11, 'Nice try, but the mighty Drunken Sea Dragon is sunk. Not a GREATEST first day as a pirate. Hope you learned how to swim.', 'replay', 'quit', 0, 28, null),
 
     (12, 'Captain White Stache has decide to take a chance on you and the hunt for Blackbeard''s treasure begins, only there''s a bit of an issue. You can take the most direct course to get to the treaure as quickly as possible and face the dangerous rocky outcropping surrounding the island. Or take the longer path on the windward side of the island with a chance of relatively safe passage.', 'safety first', 'quick and dirty', 19, 20, true),
 
@@ -81,6 +81,10 @@ VALUES
     (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
 
     (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null);
+
+    (28, 'test chance', 'barter with the locals for supplies and try to repair the ship', 'continue on and hope to find clues along the way', 25, 26, false),
+
+
 
 INSERT INTO
     users (username)
