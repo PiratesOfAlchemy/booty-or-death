@@ -1,9 +1,13 @@
 {
   "name": "booty-or-death",
   "version": "1.0.0",
-  "description": "",
+  "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
   "main": "server.js",
   "type": "commonjs",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/PiratesOfAlchemy/booty-or-death.git",
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
     "test:watch": "npm run test -- --watch",
