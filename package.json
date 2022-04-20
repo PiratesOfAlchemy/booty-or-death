@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
   "main": "",
+  "bin": {
+    "booty": "./lib/index.js"
+  },
   "type": "commonjs",
   "repository": {
     "type": "git",
