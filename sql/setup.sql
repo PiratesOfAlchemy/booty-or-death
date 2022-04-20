@@ -56,7 +56,7 @@ VALUES
 
     (14, 'That scurvy dog! You find the supplies the Captain has been hoarding from the crew...', 'secretly distribute to your mates', 'call for a mutiny', 21, 22, false), 
 
-    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, and has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 23, 24, true),
+    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, {NAME}. He has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 23, 24, true),
 
     (16, 'You steal a rowboat and make it to the island just before your limited supplies run out. As you scour the island in search of food, you come across a sad little bedraggled parrot, quite literally on their last leg...', 'offer the poor bird the last of your food', 'eat the bird', 24, 25, false),
 
@@ -70,7 +70,7 @@ VALUES
 
     (21, 'The crew is aghast at the Captain''s impertinence and might be more on your side...if they weren''t so desperate for rations. A fight breaks out as you''re trying to distribute the food evenly...', 'give your share of oranges to calm the tides', 'draw your blade', 26, 27, true),
 
-    (22, 'Surprise! You are hated by everyone on the ship and they aren''t into your idea of mutiny-ing their precious captain.', 'replay', 'quit', 0, 0, null),
+    (22, 'Surprise! {NAME}, you are hated by everyone on the ship and they aren''t into your idea of mutiny-ing their precious captain.', 'replay', 'quit', 0, 0, null),
 
     (23, 'You''ve found the infamous Blackbeard''s treasure!! It''s now up to you how ye see fit to split it amongst the crew.', 'replay', 'quit', 0, 0, null),
     
@@ -81,6 +81,10 @@ VALUES
     (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
 
     (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with just your legs.', 'replay', 'quit', 0, 0, null),
+
+    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one, {NAME}? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
+
+    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
 
     (28, 'You''re in luck! Their captain is quite the scallywag and surrenders immediately. As your mates scour the ship for their miniscule booty, the Captain begs you to spare their lives.', 'give quarter and leave with your booty', ' sink the ship with them onboard', 24, 25, false),
 
