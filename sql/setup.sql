@@ -82,10 +82,6 @@ VALUES
 
     (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with just your legs.', 'replay', 'quit', 0, 0, null),
 
-    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one, {NAME}? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
-
-    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
-
     (28, 'You''re in luck! Their captain is quite the scallywag and surrenders immediately. As your mates scour the ship for their miniscule booty, the Captain begs you to spare their lives.', 'give quarter and leave with your booty', ' sink the ship with them onboard', 24, 25, false),
 
     (29, 'Your mates have incredible marksmanship and you manage to sink their ship in only four shots, allowing you time to make your escape. Your ship has taken major damage though, and you''re forced to dock at the first opportunity.', ' only buy precisely what you need to repair the ship/restock supplies', 'spend all your money on a treasure map and hope for a grand reward', 25, 26, false),
