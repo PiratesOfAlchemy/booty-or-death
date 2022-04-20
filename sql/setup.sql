@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS user_plot CASCADE;
 DROP TABLE IF EXISTS plot CASCADE;
@@ -96,3 +95,4 @@ INSERT INTO
     users (username)
 VALUES
     ('default');
+
