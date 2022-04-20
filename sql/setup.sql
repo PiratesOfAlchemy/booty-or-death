@@ -28,11 +28,11 @@ CREATE TABLE user_plot (
 INSERT INTO 
     plot (id, prompt, heroic_choice, villainous_choice, heroic_block_id, villainous_block_id, is_heroic)
 VALUES 
-    (1, 'Ahoy matey! Welcome to yer first day aboard the mighty Drunken Sea Dragon, captained by the most fearsome pirate of these seven seas, Captain White Stache. Ye''ll want to make an impression your mates as you''ll be living with them for years to come (if ye last that long).', 'bake a delicious peace-offering cake', 'insult the first person you see', 2, 3, null),
+    (1, 'Ahoy, {NAME}! Welcome to yer first day aboard the mighty Drunken Sea Dragon, captained by the most fearsome pirate of these seven seas, Captain White Stache. Ye''ll want to make an impression your mates as you''ll be living with them for years to come (if ye last that long).', 'bake a delicious peace-offering cake', 'insult the first person you see', 2, 3, null),
 
     (2, 'Suddenly everyone''s steely eyes have softened and you''re offered some of the Captain''s best rum that''s been pilfered from his cabin. Do you...', 'offer to be lookout for Captain White Stache and his first mate, Teal Steel', 'accept and attempt to drink everyone under the table', 4, 5, true),
 
-    (3, 'You''ve managed to piss off the first mate, Teal Steel and have the honor of swabbing the deck for the next month, as well as any other task he seems fit to give you. Do you...', 'try to impress him with your worth ethic in hopes of getting back on his good side', 'intimidate a crewmate into completing your tasks', 6, 7, false),
+    (3, 'Oh no, {NAME}, you''ve managed to piss off the first mate, Teal Steel and have the honor of swabbing the deck for the next month, as well as any other task he seems fit to give you. Do you...', 'try to impress him with your worth ethic in hopes of getting back on his good side', 'intimidate a crewmate into completing your tasks', 6, 7, false),
 
     (4, 'While keeping lookout, you see a ship in the distance that is gaining on you fast. You call out the alarm! Shots are fired and you split the other ship''s mast in half. As you swing aboard the enemy''s ship, do you...', 'try to gather all the enemy crew while the pillaging begins', 'lead the raid with gusto!', 8, 9, true), 
 
@@ -44,7 +44,7 @@ VALUES
 
     (8, 'With the majority of the crew alive, you''re able to hear a very interesting tidbit of information. Seems they''ve been hoarding the map to the fearsome Blackbeard''s vast treasures.', 'tell the captain', 'confiscator it for yourself', 15, 16, true),
 
-    (9, 'Give no quarter! You fight violently and enthusiastically, but soon find yourself outmatched by the more seasoned pirates and find yourself run through. The worst bit? The bloody mate''s name is Jeff. You were bested by Jeff.', 'replay', 'quit', 0, 0, null),
+    (9, 'Give no quarter, {NAME}! You fight violently and enthusiastically, but soon find yourself outmatched by the more seasoned pirates and find yourself run through. The worst bit? The bloody mate''s name is Jeff. You were bested by Jeff.', 'replay', 'quit', 0, 0, null),
 
     (10, 'The British are boarding your ship and will be taking everyone captive and return them to England to face penalty for their crimes. You...', 'try to convince them to leave', 'try to take them all on', 17, 18, true),
 
@@ -56,7 +56,7 @@ VALUES
 
     (14, 'That scurvy dog! You find the supplies the Captain has been hoarding from the crew...', 'secretly distribute to the crew', 'call for a mutiny', 21, 22, false), 
 
-    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, and has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 23, 24, true),
+    (15, 'Captain White Stache is impressed by your loyalty to him and the crew, {NAME}. He has you lead a landing party to the marked island. By the time you make land, your mates are exhausted and crotchety. You can...', 'rally your mates and fight your way through the forest', 'let them fight it out while you nap in this lovely clearing', 23, 24, true),
 
     (16, 'You steal a rowboat and make it to the island just before your limited supplies run out. As you scour the island in search of food, you come across a sad little bedraggled parrot, quite literally on their last leg...', 'offer the poor bird the last of your food', 'eat the bird', 24, 25, false),
 
@@ -70,7 +70,7 @@ VALUES
 
     (21, 'The crew is aghast at the Captain''s impertinence and might be more on your side...if they weren''t so desperate for rations. A fight breaks out as you''re trying to distribute the food evenly...', 'give your share of oranges to calm the tides', 'draw your blade', 26, 27, true),
 
-    (22, 'Surprise! You are hated by everyone on the ship and they aren''t into your idea of mutiny-ing their precious captain.', 'replay', 'quit', 0, 0, null),
+    (22, 'Surprise! {NAME}, you are hated by everyone on the ship and they aren''t into your idea of mutiny-ing their precious captain.', 'replay', 'quit', 0, 0, null),
 
     (23, 'You''ve found the infamous Blackbeard''s treasure!! It''s now up to you how ye see fit to split it amongst the crew.', 'replay', 'quit', 0, 0, null),
     
@@ -80,7 +80,7 @@ VALUES
 
     (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
 
-    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
+    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one, {NAME}? Hope you''re good at swimming with your legs.', 'replay', 'quit', 0, 0, null),
 
     (28, 'test chance', 'barter with the locals for supplies and try to repair the ship', 'continue on and hope to find clues along the way', 25, 26, false);
 
