@@ -2,7 +2,7 @@
   "name": "booty-or-death",
   "version": "1.0.0",
   "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
-  "main": "server.js",
+  "main": "",
   "type": "commonjs",
   "repository": {
     "type": "git",
