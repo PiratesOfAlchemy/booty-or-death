@@ -80,7 +80,11 @@ VALUES
 
     (26, 'Drat! You''ve contracted skurvy and the worst news? The teeth don''t go back in! And you might be losing what''s left of your friends, too. Best find ya some oranges, quick as ye can!', 'replay', 'quit', 0, 0, null),
 
+<<<<<<< HEAD
     (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with just your legs.', 'replay', 'quit', 0, 0, null),
+=======
+    (27, 'A cry to ''Walk the plank!'' goes out and you''re forced to the ship''s edge with your hands tied behind your back. How are you going to get out of this one? Hope you''re good at swimming with your legs. {BOOTY}', 'replay', 'quit', 0, 0, null),
+>>>>>>> 9634d0bf86fb103c791792417e6bd96c92e89284
 
     (28, 'You''re in luck! Their captain is quite the scallywag and surrenders immediately. As your mates scour the ship for their miniscule booty, the Captain begs you to spare their lives.', 'give quarter and leave with your booty', ' sink the ship with them onboard', 24, 25, false),
 
