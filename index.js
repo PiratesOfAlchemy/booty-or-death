@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+const wrap = require('word-wrap');
 const inquirer = require('inquirer');
 const {
   getPrompts,
@@ -110,8 +111,12 @@ const gameLoop = async (gameId, user) => {
           ),
           name: 'choice',
           choices: [
-            choiceArray[coinFlip].replace(/{CHANCE}/g, chance),
-            choiceArray[otherChoice].replace(/{CHANCE}/g, chance),
+            wrap(choiceArray[coinFlip].replace(/{CHANCE}/g, chance), {
+              width: 60,
+            }),
+            wrap(choiceArray[otherChoice].replace(/{CHANCE}/g, chance), {
+              width: 60,
+            }),
           ],
         },
       ]);
