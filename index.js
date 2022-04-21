@@ -15,7 +15,7 @@ const chalk = require('chalk');
 //const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton, flag } = require('./lib/utils/ascii');
+const { skull, ship, parrot, skeleton, flag, shark } = require('./lib/utils/ascii');
 
 // const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
 // rainbow.render();
@@ -26,6 +26,7 @@ const sleep = (ms = 200) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
   9: skeleton,
+  13: shark,
   22: flag,
   24: parrot,
 };
