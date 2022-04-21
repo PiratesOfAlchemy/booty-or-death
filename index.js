@@ -89,8 +89,7 @@ const gameLoop = async (gameId, user) => {
     })
     .then((chancePrompts) => {
       const coinFlip = Math.round(Math.random());
-      //This coin flip conditional is set to never trigger for testing purposes
-      if (chancePrompts.heroicBlockId === '0' && coinFlip === 1) {
+      if (chancePrompts?.heroicBlockId === '0' && coinFlip === 1) {
         currentPrompts.villainousBlockId = chancePrompts.villainousBlockId;
       }
     })
