@@ -2,18 +2,21 @@
   "name": "booty-or-death",
   "version": "1.0.0",
   "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
-  "main": "",
+  "main": "index.js",
+  "bin": {
+    "booty": "./index.js"
+  },
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PiratesOfAlchemy/booty-or-death.git"
+    "url": "https://github.com/PiratesOfAlchemy/booty-or-death"
   },
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
     "test:watch": "npm run test -- --watch",
-    "start": "node -r dotenv/config server.js",
-    "booty": "node -r dotenv/config lib/index.js",
-    "start:watch": "nodemon -r dotenv/config server.js",
+    "start": "node -r dotenv/config index.js",
+    "booty": "node -r dotenv/config index.js",
+    "start:watch": "nodemon -r dotenv/config index.js",
     "setup-db": "node -r dotenv/config setup-db.js",
     "setup-heroku": "heroku run npm run setup-db"
   },
@@ -37,6 +40,7 @@
     "supertest": "^6.2.2"
   },
   "dependencies": {
+    "booty-or-death": "^1.0.0",
     "cross-env": "^7.0.3",
     "cross-fetch": "^3.1.5",
     "dotenv": "^16.0.0",
