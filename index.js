@@ -126,7 +126,7 @@ const gameLoop = async (gameId, user) => {
       ]);
     })
     .then((answers) => {
-      if (answers.choice === 'quit') return process.exit();
+      if (answers.choice === 'quit') process.exit();
       if (answers.choice === 'replay') return setUsername();
       if (answers.choice === currentPrompts.villainousChoice) {
         postUserPlot(
