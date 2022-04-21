@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+
+console.log('\x1b[40mnnamdi\x1b[49m');
+
 const inquirer = require('inquirer');
 const {
   getPrompts,
@@ -12,7 +15,7 @@ const chalk = require('chalk');
 //const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
+const { skull, ship, parrot } = require('./lib/utils/ascii');
 
 // const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
 // rainbow.render();
@@ -22,7 +25,6 @@ const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
-  1: skeleton,
   24: parrot,
 };
 
@@ -106,7 +108,7 @@ const gameLoop = async (gameId, user) => {
         {
           prefix: '*',
           type: 'list',
-          message: chalk.blue(
+          message: chalk.cyanBright(
             promptString(currentPrompts.prompt, user, totalBooty)
           ),
           name: 'choice',

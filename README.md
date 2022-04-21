@@ -19,7 +19,9 @@
 
 | Olivia Miller: |
 | :----------------------------------------------------------------------------------- | ----------: |
-| |
+| Olivia is a front end developer in Portland, OR. She was working in stop motion animation and textile design before coding. Her favorite video game is anything to do with Mario or Zelda and her pirate name is
+Scowlin’ Jane Morgan. |
+
 | Ari Harlem-Caballero: |
 | :----------------------------------------------------------------------------------- | ----------: |
 | |
