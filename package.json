@@ -50,6 +50,7 @@
     "inquirer": "^8.2.2",
     "node-fetch": "^3.2.3",
     "pg": "^8.7.3",
-    "superagent": "^7.1.2"
+    "superagent": "^7.1.2",
+    "word-wrap": "^1.2.3"
   }
 }

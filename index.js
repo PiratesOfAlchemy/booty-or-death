@@ -12,7 +12,7 @@ const chalk = require('chalk');
 //const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
+const { skull, ship, parrot } = require('./lib/utils/ascii');
 
 // const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
 // rainbow.render();
@@ -22,7 +22,6 @@ const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
 const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
-  1: skeleton,
   24: parrot,
 };
 
@@ -73,7 +72,7 @@ const setUsername = async () => {
 
 const gameLoop = async (gameId, user) => {
   let currentPrompts = {};
-  let totalBooty;
+  let totalBooty = false;
   getPrompts(gameId)
     .then((prompts) => {
       currentPrompts = prompts;
@@ -82,7 +81,7 @@ const gameLoop = async (gameId, user) => {
     .then((chancePrompts) => {
       const coinFlip = Math.round(Math.random());
       //This coin flip conditional is set to never trigger for testing purposes
-      if (chancePrompts.heroicBlockId === '0' && coinFlip <= 0) {
+      if (chancePrompts.heroicBlockId === '0' && coinFlip === 1) {
         currentPrompts.villainousBlockId = chancePrompts.villainousBlockId;
       }
     })
@@ -92,26 +91,29 @@ const gameLoop = async (gameId, user) => {
       }
     })
     .then(() => {
+      // eslint-disable-next-line quotes
+      const chance = chalk.dim.red(`(CHANCE)`);
       const choiceArray = [
         currentPrompts.heroicChoice,
         currentPrompts.villainousChoice,
       ];
 
+      if (asciiMap[currentPrompts.id]) console.log(asciiMap[currentPrompts.id]);
       const coinFlip = Math.round(Math.random());
       let otherChoice = null;
-      //comment back in when done testing
-      //coinFlip === 1 ? (otherChoice = 0) : (otherChoice = 1);
-      if (asciiMap[currentPrompts.id]) console.log(asciiMap[currentPrompts.id]);
+      coinFlip === 1 ? (otherChoice = 0) : (otherChoice = 1);
       return inquirer.prompt([
         {
           prefix: '*',
           type: 'list',
-          message: chalk.blue(
+          message: chalk.cyanBright(
             promptString(currentPrompts.prompt, user, totalBooty)
           ),
           name: 'choice',
-          choices: choiceArray,
-          // choices: [choiceArray[coinFlip], choiceArray[otherChoice]],
+          choices: [
+            choiceArray[coinFlip].replace(/{CHANCE}/g, chance),
+            choiceArray[otherChoice].replace(/{CHANCE}/g, chance),
+          ],
         },
       ]);
     })
