@@ -16,7 +16,7 @@ const figlet = require('figlet');
 const gradient = require('gradient-string');
 const { skull, ship, parrot, skeleton, flag, shark, chest, map } = require('./lib/utils/ascii');
 
-const sleep = (ms = 200) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms = 5000) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
   1: map,
@@ -26,6 +26,9 @@ const asciiMap = {
   22: flag,
   23: chest,
   24: parrot,
+  25: flag,
+  26: skeleton,
+  27: shark,
   31: chest,
   32: map
 };
