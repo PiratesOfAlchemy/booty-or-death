@@ -12,26 +12,22 @@ const {
   promptString,
 } = require('./lib/utils/utils');
 const chalk = require('chalk');
-//const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
 const { skull, ship, parrot, skeleton, flag, shark, chest, map } = require('./lib/utils/ascii');
-
-// const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
-// rainbow.render();
-// console.log(chalk.blue('Working?'));
-// console.log(gradient('cyan', 'pink')('Hello world!'));
 
 const sleep = (ms = 200) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
   1: map,
   9: skeleton,
+  11: shark,
   13: shark,
   22: flag,
   23: chest,
   24: parrot,
-  31: chest
+  31: chest,
+  32: map
 };
 
 async function gameStart() {
