@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /* eslint-disable no-console */
 const inquirer = require('inquirer');
 const {
@@ -6,12 +7,12 @@ const {
   postUserPlot,
   setBooty,
   promptString,
-} = require('./utils/utils');
+} = require('./lib/utils/utils');
 const chalk = require('chalk');
 //const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton } = require('./utils/ascii');
+const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
 
 // const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
 // rainbow.render();
