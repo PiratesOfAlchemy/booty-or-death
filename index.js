@@ -10,24 +10,20 @@ const {
   promptString,
 } = require('./lib/utils/utils');
 const chalk = require('chalk');
+//const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton, flag, shark, chest, map } = require('./lib/utils/ascii');
+const { skull, ship, parrot } = require('./lib/utils/ascii');
 
-const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
+// const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
+// rainbow.render();
+// console.log(chalk.blue('Working?'));
+// console.log(gradient('cyan', 'pink')('Hello world!'));
+
+const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
-  9: skeleton,
-  11: gradient.mind(shark),
-  13: gradient.mind(shark),
-  22: gradient.passion(flag),
-  23: chalk.yellowBright(chest),
-  24: gradient.rainbow(parrot),
-  25: gradient.passion(flag),
-  26: skeleton,
-  27: gradient.mind(shark),
-  31: chalk.yellowBright(chest),
-  32: chalk.inverse.yellow(map)
+  24: parrot,
 };
 
 async function gameStart() {
@@ -65,7 +61,7 @@ const setUsername = async () => {
     ])
     .then((answer) => {
       console.log(
-        chalk.bold(gradient.mind(`Welcome aboard, ${answer.username}! You'll get a chance to earn some booty while sailing these seas ... depending on how you fair as a worthy pirate.`)),
+        chalk.bold(gradient.mind(`Welcome aboard, ${answer.username}`)),
         ship
       );
       return postUsername(answer.username);
@@ -110,7 +106,7 @@ const gameLoop = async (gameId, user) => {
         {
           prefix: '*',
           type: 'list',
-          message: chalk.cyanBright(
+          message: chalk.white.bgBlack(
             promptString(currentPrompts.prompt, user, totalBooty)
           ),
           name: 'choice',
@@ -126,8 +122,8 @@ const gameLoop = async (gameId, user) => {
       ]);
     })
     .then((answers) => {
-      if (answers.choice === 'quit') process.exit();
-      if (answers.choice === 'replay') return setUsername();
+      if (answers.choice === wrap('quit')) return;
+      if (answers.choice === wrap('replay')) return setUsername();
       if (answers.choice === currentPrompts.villainousChoice) {
         postUserPlot(
           currentPrompts.villainousBlockId,
