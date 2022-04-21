@@ -75,7 +75,7 @@ const setUsername = async () => {
 
 const gameLoop = async (gameId, user) => {
   let currentPrompts = {};
-  let totalBooty;
+  let totalBooty = false;
   getPrompts(gameId)
     .then((prompts) => {
       currentPrompts = prompts;
@@ -84,7 +84,7 @@ const gameLoop = async (gameId, user) => {
     .then((chancePrompts) => {
       const coinFlip = Math.round(Math.random());
       //This coin flip conditional is set to never trigger for testing purposes
-      if (chancePrompts.heroicBlockId === '0' && coinFlip <= 0) {
+      if (chancePrompts.heroicBlockId === '0' && coinFlip === 1) {
         currentPrompts.villainousBlockId = chancePrompts.villainousBlockId;
       }
     })
@@ -94,16 +94,17 @@ const gameLoop = async (gameId, user) => {
       }
     })
     .then(() => {
+      // eslint-disable-next-line quotes
+      const chance = chalk.dim.red(`(CHANCE)`);
       const choiceArray = [
         currentPrompts.heroicChoice,
         currentPrompts.villainousChoice,
       ];
 
+      if (asciiMap[currentPrompts.id]) console.log(asciiMap[currentPrompts.id]);
       const coinFlip = Math.round(Math.random());
       let otherChoice = null;
-      //comment back in when done testing
-      //coinFlip === 1 ? (otherChoice = 0) : (otherChoice = 1);
-      if (asciiMap[currentPrompts.id]) console.log(asciiMap[currentPrompts.id]);
+      coinFlip === 1 ? (otherChoice = 0) : (otherChoice = 1);
       return inquirer.prompt([
         {
           prefix: '*',
@@ -112,8 +113,10 @@ const gameLoop = async (gameId, user) => {
             promptString(currentPrompts.prompt, user, totalBooty)
           ),
           name: 'choice',
-          choices: choiceArray,
-          // choices: [choiceArray[coinFlip], choiceArray[otherChoice]],
+          choices: [
+            choiceArray[coinFlip].replace(/{CHANCE}/g, chance),
+            choiceArray[otherChoice].replace(/{CHANCE}/g, chance),
+          ],
         },
       ]);
     })
