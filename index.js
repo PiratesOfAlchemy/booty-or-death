@@ -15,16 +15,17 @@ const chalk = require('chalk');
 //const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot } = require('./lib/utils/ascii');
+const { skull, ship, parrot, skeleton } = require('./lib/utils/ascii');
 
 // const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
 // rainbow.render();
 // console.log(chalk.blue('Working?'));
 // console.log(gradient('cyan', 'pink')('Hello world!'));
 
-const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms = 200) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
+  1: skeleton,
   24: parrot,
 };
 
