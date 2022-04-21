@@ -1,6 +1,6 @@
 {
   "name": "@pirates-of-alchemy/booty-or-death",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
   "main": "index.js",
   "bin": {
@@ -40,7 +40,7 @@
     "supertest": "^6.2.2"
   },
   "dependencies": {
-    "booty-or-death": "^1.0.0",
+    "booty-or-death": "^1.0.1",
     "cross-env": "^7.0.3",
     "cross-fetch": "^3.1.5",
     "dotenv": "^16.0.0",
