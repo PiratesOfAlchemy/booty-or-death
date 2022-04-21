@@ -1,6 +1,6 @@
 {
   "name": "@pirates-of-alchemy/booty-or-death",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Booty or Death is a pirate-themed terminal-based choose-your-own adventure game",
   "main": "index.js",
   "bin": {
@@ -14,7 +14,7 @@
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
     "test:watch": "npm run test -- --watch",
-    "start": "node -r dotenv/config index.js",
+    "start": "node -r dotenv/config server.js",
     "booty": "node -r dotenv/config index.js",
     "start:watch": "nodemon -r dotenv/config index.js",
     "setup-db": "node -r dotenv/config setup-db.js",
