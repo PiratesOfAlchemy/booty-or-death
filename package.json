@@ -9,7 +9,7 @@
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PiratesOfAlchemy/booty-or-death.git"
+    "url": "https://github.com/PiratesOfAlchemy/booty-or-death/"
   },
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults --setupFiles dotenv/config",
