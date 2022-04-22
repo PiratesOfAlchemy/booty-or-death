@@ -12,7 +12,16 @@ const {
 const chalk = require('chalk');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot, skeleton, flag, shark, chest, map } = require('./lib/utils/ascii');
+const {
+  skull,
+  ship,
+  parrot,
+  skeleton,
+  flag,
+  shark,
+  chest,
+  map,
+} = require('./lib/utils/ascii');
 
 const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,7 +36,8 @@ const asciiMap = {
   26: skeleton,
   27: gradient.mind(shark),
   31: chalk.yellowBright(chest),
-  32: chalk.inverse.yellow(map)
+  32: chalk.inverse.yellow(map),
+
 };
 
 async function gameStart() {
@@ -65,7 +75,11 @@ const setUsername = async () => {
     ])
     .then((answer) => {
       console.log(
-        chalk.bold(gradient.mind(`Welcome aboard, ${answer.username}! You'll get a chance to earn some booty while sailing these seas ... depending on how you fair as a worthy pirate.`)),
+        chalk.bold(
+          gradient.mind(
+            `Welcome aboard, ${answer.username}! You'll get a chance to earn some booty while sailing these seas ... depending on how you fair as a worthy pirate.`
+          )
+        ),
         ship
       );
       return postUsername(answer.username);
