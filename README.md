@@ -26,4 +26,6 @@ Scowlin’ Jane Morgan.
 
 ### | [Ari Harlem-Caballero](https://github.com/ari-harlem-caballero) |
 
-Ari Harlem-Caballero is a full-stack developer from Portland, OR. They've been a freelance artist in various mediums since graduating high school and hope to incorporate their creativity in the coding world. Most video games give them anxiety, but they've always enjoyed create-your-own-adventure books like 'Captain Underpants'. Their pirate name is Androgynous Quin.
+Ari Harlem-Caballero is a full-stack developer from Portland, OR. They've been a freelance artist in various mediums since graduating high school and hope to incorporate their creativity in the coding world. Most video games give them anxiety, but they've always enjoyed create-your-own-adventure books like 'Captain Underpants'. Their pirate name is Androgynous Quinn Dawkins.
+
+#### [Heroku API](http://booty-or-death.herokuapp.com)
