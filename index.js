@@ -37,7 +37,6 @@ const asciiMap = {
   27: gradient.mind(shark),
   31: chalk.yellowBright(chest),
   32: chalk.inverse.yellow(map),
-
 };
 
 async function gameStart() {
@@ -124,7 +123,7 @@ const gameLoop = async (gameId, user) => {
         {
           prefix: '*',
           type: 'list',
-          message: chalk.cyanBright(
+          message: chalk.white.bgBlack(
             promptString(currentPrompts.prompt, user, totalBooty)
           ),
           name: 'choice',
@@ -140,8 +139,8 @@ const gameLoop = async (gameId, user) => {
       ]);
     })
     .then((answers) => {
-      if (answers.choice === 'quit') process.exit();
-      if (answers.choice === 'replay') return setUsername();
+      if (answers.choice === wrap('quit')) return;
+      if (answers.choice === wrap('replay')) return setUsername();
       if (answers.choice === currentPrompts.villainousChoice) {
         postUserPlot(
           currentPrompts.villainousBlockId,
