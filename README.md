@@ -3,6 +3,8 @@
 ## Description:
 - Booty or Death is a choose your own adventure pirate game. The player will give their pirate name and then set off on an adventure. The choices you make will forge your path. Some choices will lead to riches while others may lead to your doom. The choice is yours! For the best viewing experience make your full height (you might need to adjust the width too). (best played on a Mac)
 
+#### terminal command: npx @pirates-of-alchemy/booty-or-death@latest booty
+
 ## About the project:
 
 - This project was developed using express and inquirer. The game is played in the terminal using inquirer. Express is used to create the database. The database is used to store the users username and the values of the choices the player makes to determine how mush gold doubloons the player receives. It also provides the prompts for the player, the choices they can make, and correctly directs the player to the next prompt based on the choice they make.
