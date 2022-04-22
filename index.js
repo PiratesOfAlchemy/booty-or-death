@@ -128,19 +128,15 @@ const gameLoop = async (gameId, user) => {
           ),
           name: 'choice',
           choices: [
-            wrap(choiceArray[coinFlip].replace(/{CHANCE}/g, chance), {
-              width: 60,
-            }),
-            wrap(choiceArray[otherChoice].replace(/{CHANCE}/g, chance), {
-              width: 60,
-            }),
+            choiceArray[coinFlip].replace(/{CHANCE}/g, chance),
+            choiceArray[otherChoice].replace(/{CHANCE}/g, chance),
           ],
         },
       ]);
     })
     .then((answers) => {
-      if (answers.choice === wrap('quit')) return;
-      if (answers.choice === wrap('replay')) return setUsername();
+      if (answers.choice === 'quit') return;
+      if (answers.choice === 'replay') return setUsername();
       if (answers.choice === currentPrompts.villainousChoice) {
         postUserPlot(
           currentPrompts.villainousBlockId,
