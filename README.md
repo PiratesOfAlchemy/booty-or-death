@@ -1,7 +1,7 @@
 # Booty or Death
 
 ## Description:
-- Booty or Death is a choose your own adventure pirate game. The player will give their pirate name and then set off on an adventure. The choices you make will forge your path. Some choices will lead to riches while others may lead to your doom. The choice is yours! For the best viewing experience make your full height (you might need to adjust the width too).
+- Booty or Death is a choose your own adventure pirate game. The player will give their pirate name and then set off on an adventure. The choices you make will forge your path. Some choices will lead to riches while others may lead to your doom. The choice is yours! For the best viewing experience make your full height (you might need to adjust the width too). (best played on a Mac)
 
 ## About the project:
 
