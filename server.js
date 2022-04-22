@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const app = require('./lib/app');
 const pool = require('./lib/utils/pool');
 
