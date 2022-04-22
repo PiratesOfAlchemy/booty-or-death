@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+const wrap = require('word-wrap');
 const inquirer = require('inquirer');
 const {
   getPrompts,
@@ -9,20 +10,34 @@ const {
   promptString,
 } = require('./lib/utils/utils');
 const chalk = require('chalk');
-//const chalkAnimation = require('chalk-animation');
 const figlet = require('figlet');
 const gradient = require('gradient-string');
-const { skull, ship, parrot } = require('./lib/utils/ascii');
+const {
+  skull,
+  ship,
+  parrot,
+  skeleton,
+  flag,
+  shark,
+  chest,
+  map,
+} = require('./lib/utils/ascii');
 
-// const rainbow = chalkAnimation.rainbow('This is a rainbow for pirates!').stop();
-// rainbow.render();
-// console.log(chalk.blue('Working?'));
-// console.log(gradient('cyan', 'pink')('Hello world!'));
-
-const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
 const asciiMap = {
-  24: parrot,
+  9: skeleton,
+  11: gradient.mind(shark),
+  13: gradient.mind(shark),
+  22: gradient.passion(flag),
+  23: chalk.yellowBright(chest),
+  24: gradient.rainbow(parrot),
+  25: gradient.passion(flag),
+  26: skeleton,
+  27: gradient.mind(shark),
+  31: chalk.yellowBright(chest),
+  32: chalk.inverse.yellow(map),
+
 };
 
 async function gameStart() {
@@ -60,7 +75,11 @@ const setUsername = async () => {
     ])
     .then((answer) => {
       console.log(
-        chalk.bold(gradient.mind(`Welcome aboard, ${answer.username}`)),
+        chalk.bold(
+          gradient.mind(
+            `Welcome aboard, ${answer.username}! You'll get a chance to earn some booty while sailing these seas ... depending on how you fair as a worthy pirate.`
+          )
+        ),
         ship
       );
       return postUsername(answer.username);
@@ -110,14 +129,18 @@ const gameLoop = async (gameId, user) => {
           ),
           name: 'choice',
           choices: [
-            choiceArray[coinFlip].replace(/{CHANCE}/g, chance),
-            choiceArray[otherChoice].replace(/{CHANCE}/g, chance),
+            wrap(choiceArray[coinFlip].replace(/{CHANCE}/g, chance), {
+              width: 60,
+            }),
+            wrap(choiceArray[otherChoice].replace(/{CHANCE}/g, chance), {
+              width: 60,
+            }),
           ],
         },
       ]);
     })
     .then((answers) => {
-      if (answers.choice === 'quit') return;
+      if (answers.choice === 'quit') process.exit();
       if (answers.choice === 'replay') return setUsername();
       if (answers.choice === currentPrompts.villainousChoice) {
         postUserPlot(
