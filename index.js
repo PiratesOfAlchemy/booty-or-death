@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-const wrap = require('word-wrap');
 const inquirer = require('inquirer');
 const {
   getPrompts,
