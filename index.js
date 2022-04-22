@@ -90,9 +90,11 @@ const setUsername = async () => {
 const gameLoop = async (gameId, user) => {
   let currentPrompts = {};
   let totalBooty = false;
+  const chance = chalk.dim.red(`(CHANCE)`);
   getPrompts(gameId)
     .then((prompts) => {
       currentPrompts = prompts;
+      console.log(prompts.villainousBlockId);
       return getPrompts(prompts.villainousBlockId);
     })
     .then((chancePrompts) => {
@@ -108,7 +110,7 @@ const gameLoop = async (gameId, user) => {
     })
     .then(() => {
       // eslint-disable-next-line quotes
-      const chance = chalk.dim.red(`(CHANCE)`);
+
       const choiceArray = [
         currentPrompts.heroicChoice,
         currentPrompts.villainousChoice,
@@ -136,13 +138,17 @@ const gameLoop = async (gameId, user) => {
     .then((answers) => {
       if (answers.choice === 'quit') return;
       if (answers.choice === 'replay') return setUsername();
-      if (answers.choice === currentPrompts.villainousChoice) {
+      if (
+        answers.choice ===
+        currentPrompts.villainousChoice.replace(/{CHANCE}/g, chance)
+      ) {
         postUserPlot(
           currentPrompts.villainousBlockId,
           currentPrompts.isHeroic,
           user.id
         );
         console.clear();
+        console.log(currentPrompts.villainousBlockId);
         gameLoop(currentPrompts.villainousBlockId, user);
       } else {
         postUserPlot(
